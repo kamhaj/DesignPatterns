@@ -1,10 +1,13 @@
 '''
-Abstract Factory Pattern -   allows you to produce the families of related objects without specifying their
+Abstract Factory Pattern - creates an instance of several families of classes
+
+                             allows you to produce the families of related objects without specifying their
                              concrete classes. Using the abstract factory method, we have the easiest ways to produce
                              a similar type of many objects. It provides a way to encapsulate a group of individual factories.
 
                              difference between abstract factory and factory method is that abstract factory is a factory of a factory.
                              we give CourseFactory new factories (course classes) as parameter.
+
 '''
 
 import random
