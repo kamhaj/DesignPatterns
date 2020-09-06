@@ -10,7 +10,6 @@ Factory Pattern -   allows an interface or a class to create an object, but let 
 
 import matplotlib.pyplot as plt
 import matplotlib
-import numpy as np
 
 
 class Circle:
@@ -41,7 +40,7 @@ class Rectangle:
 
 
     """Factory Method"""
-def Factory(shape ="Circle"):
+def Factory(shape = "Circle"):
     shapes_dict = {
         "Circle": Circle,
         "Triangle": Triangle,
