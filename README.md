@@ -57,7 +57,7 @@ BEHAVIORAL PATTERNS (are concerned with algorithms and the assignment of respons
 	1. Command Pattern
 	(turns a request into a stand-alone object that contains all information about the request. This transformation lets you pass requests as a method arguments, delay or queue a request’s execution, and support undoable operations)
 
-	2. Observer Pattern
+	2. Observer Pattern / Dependency Pattern / Publish-Subscribe Pattern
 	(lets you define a subscription mechanism to notify multiple objects about any events that happen to the object they’re observing)
 
 	3. Strategy Pattern / Policy Pattern
@@ -80,3 +80,5 @@ Visitor Pattern
 Red flags for possible pattern use
 
 sequence of many if/elif statements --> Strategy Pattern
+need for listening to events (e.g. GUI: keyboard, mouse click, etc.) --> Observer Pattern
+MVC --> Observer Pattern (Model is Subject, View is Observer)
