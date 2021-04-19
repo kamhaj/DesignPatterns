@@ -1,0 +1,38 @@
+Need for interfaces in Python is covered with Abstract Base Classes (ABCs)
+(so interfaces in Python are called abstract base classes)
+
+import abc
+
+''' interface definition '''
+
+## define abstract class
+class MyABC(metaclass=abc.ABCMeta):
+""" Abstract Base Class Definition"""
+
+    ## define abstract method (using decorator)
+    @abc.abstractmethod
+    def do_something(self, value):
+        """ Requsired method"""
+
+    ## define abstract property (using decorator)
+    @abc.abstractproperty
+    def some_property(self):
+        """Required property"""
+
+
+''' concrete class implementation '''
+
+class MyClass(MyABC):
+"""Implementation of MyABC"""
+
+    def __init__(self, value=None):
+        self._myprop = value
+
+    def do_something(self, value):
+        """Implementation of abstract method"""
+        self._myprop *= 2 + value
+
+    @property
+    def some_property(self):
+        """Implementation of abstract property"""
+        return self._myprop
